@@ -7,6 +7,8 @@ Ports below are the default ports that are associated with the ATS dedicated ser
 | Dedicated| 27015 |
 | Query    | 27016   |
 
+--**Make sure during server setup that the autostart server box is unchecked**--
+
 # Setup
 You must generate the required server config files necessary to run the server in game on ATS.  To do so you **MUST** have console enabled.  
 
@@ -71,6 +73,15 @@ server_config : *randomly generated string* {
 
 }
 
+```
+To add moderators to your server instance you have to also add them to this file.  An example seen below:
+
+```
+moderator_list: 3
+moderator_list[0]: "Steam64 ID Here"
+moderator_list[1]: "Steam64 ID Here"
+moderator_list[2]: "Steam64 ID Here",
+^^^ Can be found by googling Steam ID Lookup
 ```
 
 # Enjoy your server
