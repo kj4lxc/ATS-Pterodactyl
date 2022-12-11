@@ -5,7 +5,7 @@ Ports below are the default ports that are associated with the ATS dedicated ser
 | Port    | default       |
 |---------|---------------|
 | Dedicated| 27015 |
-| Query    | 27020   |
+| Query    | 27016   |
 
 # Setup
 You must generate the required server config files necessary to run the server in game on ATS.  To do so you **MUST** have console enabled.  
@@ -26,9 +26,15 @@ With the console open type ```export_server_packages``` and press enter.  The ga
 
 Navigate to the folder that contains your clients config.cfg file that you changed in the **Enabling Console** section and look for the following:
 
-- server_config.sii
 - server_packages.sii
 - server_packages.dat
+
+
+# Copy to Server
+
+With your newly set up files its time to copy them over to the Pterodactyl Panel.  Simply upload them through either your preferred SCP program or the file browser in the server panel to the .local/shared/American Truck Simulator/ folder.
+
+On the panel select start server and the server will then start up and create a default server_config.sii file.  Proceed to the .local/shared/American Truck Simulator/ folder.
 
 Edit the server_config.sii using your favorite text editor and set it up as you need, making any changes to name, password etc.  This is also where you would change your default ports if needed to suit your Pterodactyl settings.  It should look something like this when you are finished:
 
@@ -66,12 +72,9 @@ server_config : *randomly generated string* {
 }
 
 ```
-# Copy to Server
-
-With your newly set up files its time to copy them over to the Pterodactyl Panel.  Simply upload them through either your preferred SCP program or the file browser in the server panel to the .local/shared/American Truck Simulator/ folder.
 
 # Enjoy your server
-Once those files have been uploaded you are free to start up your server.  When the sever is started look for the line: Session search id: 00000000000000000/101  The number before the / is your search term.  This is number to search for in the convoy screen to find your server.  You can **NOT** search by the server name at this time.  Example: if your number before the / is 987654321 then you would search for 987654321 on your convoy screen in game.
+Once those files have been uploaded and configured you are free to start up your server.  When the sever is started look for the line: Session search id: 00000000000000000/101  The number before the / is your search term.  This is number to search for in the convoy screen to find your server.  You can **NOT** search by the server name at this time.  Example: if your number before the / is 987654321 then you would search for 987654321 on your convoy screen in game.
 
 
 # Disclaimer
